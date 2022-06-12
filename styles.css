@@ -14,84 +14,26 @@
     z-index: 1;
     box-sizing: border-box;
 }
-.full-screen{
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.full-screen video{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -5;
-}
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    opacity: 0.5;
-    z-index: 0;
-    background-color: black;
-    opacity: 0.2;
-    background-image: radial-gradient(rgb(88, 88, 88) 1px, black 1px);
-    background-size: 3px 3px;
-}
-
-.content a
+body
 {
-    display: block;
-    margin: 50px auto;
-    width: 250px;
-    height: 54px;
-    line-height: 54px;
-    background: purple;
-    text-align: center;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: .4s linear
+    background-color: rgb(0, 0, 0);
+    min-height: 100vh;
 }
 
-.content a:hover{
-    background: black;
-}
-
-.container{
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 nav
 {
-    position: fixed;
+    position:sticky;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
     background-color: var(--dark);
     padding: 16px 32px;
-    border-bottom: 3px solid var(--primary);
 }
 
-h1
-{
-    color: white;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+/*#region Hamburger Menu Related*/
 
 .hamburger{
     display: block;
@@ -117,7 +59,7 @@ h1
     border-radius: 6px;
     
     transform-origin: 0 0;
-    transition: 0.4s;
+    transition: 0.1s linear
 }
 
 .hamburger:hover span:nth-child(2){
@@ -139,6 +81,7 @@ h1
 .hamburger.is-active:hover span{
     background-color: var(--primary);
 }
+/*#endregion */
 
 .menu
 {
@@ -154,7 +97,7 @@ h1
     margin: 0 16px;
     font-weight: 600;
     text-decoration: none;
-    transition: 0.4s;
+    transition: 0.1s linear;
     padding: 8px 15px;
     border-radius: 99px;
 }
@@ -164,11 +107,119 @@ h1
     background-color: var(--primary);
 }
 
+.container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1
+{
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.fallbackBG
+{
+    color: white;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+}
+
+.full-screen{
+
+    top: -100px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.full-screen video{
+    
+    z-index: -5;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.2;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.39) 1px, black 1px);
+    background-size: 3px 3px;
+    object-fit: cover;
+}
+
+.content{
+color: white;
+}
+
+.content a{
+    display: block;
+    margin: 50px auto;
+    width: 250px;
+    height: 54px;
+    line-height: 54px;
+    background: purple;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.1s linear
+}
+
+.content a:hover{
+    background: black;
+}
+
+
+
+
+.Footer{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    position:sticky;
+    bottom: 0;
+    background-color: black;
+}
+
 @media (min-width:700px){
     .hamburger{
         display: none;
     }
     .menu{
+        display: flex;
+    }
+    .full-screen
+    {
+        display: block;
+    }
+    .fallbackBG{
+        display: none;
+    }
+}
+@media(max-width:700px)
+{
+    .full-screen
+    {
+        display: none;
+    }
+    .fallbackBG{
         display: flex;
     }
 }
