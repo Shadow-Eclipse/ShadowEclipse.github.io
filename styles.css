@@ -12,7 +12,7 @@ html body{
     align-items: flex-start;
 }
 
-.full-screen-video-container video{
+.BGVID{
     z-index: -1;
     position: absolute;
     width: auto;
