@@ -2,18 +2,40 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://shadow-eclipse.github.io/ShadowEclipse.github.io/styles.css"/>
-
+        <link rel="stylesheet" href="styles.css">
         <title>Shadow eclipse</title>
     </head>
 <body>
-<div class="section">
-    <h1>GAME</h1>
+    <nav>
+        <div class="container">
+            <h1>SHADOW ECLIPSE</h1>
+            <div class="menu">
+                <a href="#" class="is-active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </div>
+        
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        
+        </div>
+    </nav>
+<div class="full-screen">
+        <video autoplay loop muted>
+            <source src="https://github.com/Shadow-Eclipse/ShadowEclipse.github.io/raw/main/Media/Question.mp4" type="video/mp4"/>
+        </video>
 
-    <div class="video-container">
-    <video autoplay loop muted>
-        <source src="https://github.com/Shadow-Eclipse/ShadowEclipse.github.io/raw/main/Media/Question.mp4" type="video/mp4"/>
-    </video>
-</div>
+        <div overlay class="overlay"></div>
+
+        <div class="content">
+            <a href="sfsg">GAMESTUFF</a>
+        </div>
+
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
