@@ -27,7 +27,7 @@ body
 
 nav
 {
-    position:sticky;
+    position:relative;
     top: 0;
     left: 0;
     right: 0;
@@ -225,13 +225,14 @@ color: white;
 
 
 .Footer{
+    position: relative;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
     width: 100%;
-    padding: 10px;
-    bottom: 0;
+    padding: 0px;
+    bottom: 10px;
     background-color: black;
 }
 
