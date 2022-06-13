@@ -118,13 +118,14 @@ nav
     justify-content: space-between;
 }
 
-h1
+.container h1
 {
     color: white;
     font-size: 28px;
     font-weight: 900;
     letter-spacing: 2px;
     text-transform: uppercase;
+    padding-right: 5px;
 }
 
 .fallbackBG
@@ -234,7 +235,7 @@ color: white;
     background-color: black;
 }
 
-@media (min-width:1000px){
+@media (min-width:1090px){
     .hamburger{
         display: none;
     }
