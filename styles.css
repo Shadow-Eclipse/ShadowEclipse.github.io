@@ -2,6 +2,8 @@
     --primary: purple;
     --light: white;
     --dark: black;
+
+    --gameboxsize: 80vw;
 }
 
 
@@ -13,6 +15,7 @@
     text-decoration: none;
     z-index: 1;
     box-sizing: border-box;
+    
 }
 
 body
@@ -179,6 +182,43 @@ color: white;
     background: black;
 }
 
+.recent-project-title
+{
+    color: white;
+    width: 100%;
+    height: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gamebox-container{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: var(--gameboxsize);
+}
+.gamebox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#RecentGame
+{
+    background: url(media/Project_Krash_box.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+
 
 
 
@@ -193,107 +233,19 @@ color: white;
     background-color: black;
 }
 
-@media (min-width:700px){
+@media (min-width:1000px){
     .hamburger{
         display: none;
     }
     .menu{
         display: flex;
     }
-    .full-screen
-    {
-        display: block;
-    }
-    .fallbackBG{
-        display: none;
-    }
-}
-@media(max-width:700px)
-{
-    .full-screen
-    {
-        display: none;
-    }
-    .fallbackBG{
-        display: flex;
-    }
-
     
+    :root{
+        --gameboxsize: 30vw;
+    }
 }
 
-.box-container{
 
-    display: flex;
-    justify-content: center;
-    background: rgb(15, 15, 15);
-    padding: 50px;
-    position: relative;
-    box-shadow: 10px 0px 30px 30px rgba(0, 0, 0, 0.411) inset;
-}
 
-.box{
-    position: relative;
-    width: 200px;
-    height: 200px; /* The width is 345px but we have to enlarge the area because of the drop shadow. */
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    transform-style: preserve-3d;
-    transition: all 0.5s;
-    cursor: pointer;
-    transform: rotateX(50deg) scale(1,1);
-}
-.box:hover{
-    transform: rotateX(-10deg)scale(1.1,1.1);
-}
-
-#front
-{
-    background: url(Media/Project_Krash_Logo.png);
-z-index: 0;
-}
-
-.box :nth-child(1){
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    backface-visibility: hidden;
-    perspective: 1000px;
-color: rgb(0, 0, 0);
-}
-
-.box :nth-child(6){
-    transform-origin: top center;
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    bottom: -30px;
-    transition: all 0.5s;
-color: rgb(0, 0, 0);
-transform: rotateX(0deg);
-background: url(Media/disk-bottom.png);
-}
-.box:hover :nth-child(6){
-    transform: rotateX(90deg);
-}
-/*
-#shadow
-{
-    position:absolute;
-    z-index: -10;
-    top: -5px;
-    left: -5px;
-    width: 105%;
-    height: 120%;
-    background-color: black;
-    box-shadow: 0px 0px 5px black;
-    transition: all 0.55s;
-}
-
-.box:hover :nth-child(2) #shadow{
-    height: 110%;
-    
-}
-*/
 
