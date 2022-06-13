@@ -134,18 +134,14 @@ h1
     padding: 30px;
 }
 
-.full-screen{
+.Video{
 
     top: -100px;
     position: relative;
     overflow: hidden;
-    
+    z-index: 1;
 }
 
-.full-screen video{
-    
-    z-index: -5;
-}
 .overlay{
     position: absolute;
     top: 0;
@@ -192,8 +188,7 @@ color: white;
     text-align: center;
     color: white;
     width: 100%;
-    padding: 1rem;
-    position:sticky;
+    padding: 10px;
     bottom: 0;
     background-color: black;
 }
@@ -222,4 +217,83 @@ color: white;
     .fallbackBG{
         display: flex;
     }
+
+    
 }
+
+.box-container{
+
+    display: flex;
+    justify-content: center;
+    background: rgb(15, 15, 15);
+    padding: 50px;
+    position: relative;
+    box-shadow: 10px 0px 30px 30px rgba(0, 0, 0, 0.411) inset;
+}
+
+.box{
+    position: relative;
+    width: 200px;
+    height: 200px; /* The width is 345px but we have to enlarge the area because of the drop shadow. */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    cursor: pointer;
+    transform: rotateX(50deg) scale(1,1);
+}
+.box:hover{
+    transform: rotateX(-10deg)scale(1.1,1.1);
+}
+
+#front
+{
+    background: url(Media/Project_Krash_Logo.png);
+z-index: 0;
+}
+
+.box :nth-child(1){
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    backface-visibility: hidden;
+    perspective: 1000px;
+color: rgb(0, 0, 0);
+}
+
+.box :nth-child(6){
+    transform-origin: top center;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: -30px;
+    transition: all 0.5s;
+color: rgb(0, 0, 0);
+transform: rotateX(0deg);
+background: url(Media/disk-bottom.png);
+}
+.box:hover :nth-child(6){
+    transform: rotateX(90deg);
+}
+/*
+#shadow
+{
+    position:absolute;
+    z-index: -10;
+    top: -5px;
+    left: -5px;
+    width: 105%;
+    height: 120%;
+    background-color: black;
+    box-shadow: 0px 0px 5px black;
+    transition: all 0.55s;
+}
+
+.box:hover :nth-child(2) #shadow{
+    height: 110%;
+    
+}
+*/
+
