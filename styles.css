@@ -49,6 +49,7 @@ nav
     outline: none;
     background:none;
     cursor: pointer;
+    padding: 1rem;
 }
 
 .hamburger span
