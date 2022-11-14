@@ -88,6 +88,13 @@ a{
     font-family: 'Open Sans', sans-serif;
 }
 
+.content{
+    margin: 10px;
+
+text-align: center;
+color: white;
+}
+
 .recent-project-title
 {
     color: white;
@@ -161,6 +168,9 @@ margin: 20px;
 
 
 @media (min-width:1090px){
+    .hamburger{
+        display: none;
+    }
     .menu{
         display: flex;
     }
