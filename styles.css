@@ -69,7 +69,7 @@ nav
     text-decoration: none;
     transition: 0.1s linear;
     padding: 8px 15px;
-    border-radius: 99px;
+    border-radius: 10px;
 }
 
 a{
