@@ -56,7 +56,7 @@ nav
 
 .menu
 {
-    display:inline-flex;
+    display:block;
     flex:  1 1 0%;
     justify-content: flex-end;
     margin: 0 -16px;
@@ -69,7 +69,7 @@ nav
     text-decoration: none;
     transition: 0.1s linear;
     padding: 8px 15px;
-    border-radius: 10px;
+    border-radius: 99px;
 }
 
 a{
