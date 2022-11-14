@@ -88,6 +88,23 @@ a{
     font-family: 'Open Sans', sans-serif;
 }
 
+.container{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container h1
+{
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-right: 5px;
+}
+
 .content{
     margin: 10px;
 
